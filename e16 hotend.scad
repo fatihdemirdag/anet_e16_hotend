@@ -98,29 +98,29 @@ module mountPart()
     {
         difference()
         {
-            translate([-15.0, -6.0, 0.0]) cube([5.0, 30.0, 12.0]);
+            translate([-10.0, -6.0, 0.0]) cube([5.0, 25.0, 12.0]);
             // upper screw hole
-            translate([0.0, 10.0, 14.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
+            translate([-11.0, 11.0, 6.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
         }
         // lower screw hole
-        translate([0.0, -6.0, 14.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
+        translate([-11.0, 3.0, 6.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
     }
-    translate([-10.0, 6.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=1.0, cy=1.0, fn=64);
+    translate([-5.0, 6.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=1.0, cy=1.0, fn=64);
     //translate([11.05, -4.0, 0.0]) curved_corner_2D(a=3.5, h=20.0, cx=1.0, cy=1.0, fn=64);
 
     // right mount plate
     difference()
     {
-        union()
+        difference()
         {
-            translate([56.7, -6.0, 0.0]) cube([2.0, 24.0, 20.0]);
-            translate([52.7, 1.0, 8.0]) cube([4.0, 12.0, 12.0]);
+            translate([61.7, -6.0, 0.0]) cube([5.0, 25.0, 12.0]);
+            translate([60.0, 3.0, 6.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
         }
-        translate([50.0, 7.0, 14.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
+        translate([60.0, 11.0, 6.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
     }
     // center column curves right
-    translate([61.7, 13.0, 0.0]) curved_corner_2D(a=4.0, h=20.0, cx=0.0, cy=1.0, fn=64);
-    translate([61.7, -3.0, 0.0]) curved_corner_2D(a=4.0, h=20.0, cx=0.0, cy=0.0, fn=64);
+    translate([57.7, 13.0, 0.0]) curved_corner_2D(a=4.0, h=8.0, cx=0.0, cy=1.0, fn=64);
+    translate([57.7, -3.0, 0.0]) curved_corner_2D(a=4.0, h=8.0, cx=0.0, cy=0.0, fn=64);
 }
 
 
