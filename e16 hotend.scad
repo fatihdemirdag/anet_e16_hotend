@@ -36,16 +36,12 @@ module mountPart()
     // mount part base 
     difference() // lower left
     {
-        union()
-        {
-            translate([0.0, 0.0, 0.0]) cylinder(8.0, 6.0, 6.0, $fn=64);
             difference()
             {
-                translate([-20.0, -6.0, 0.0]) cube([38.0, 12.0, 8.0]);
+                translate([-5.0, -6.0, 0.0]) cube([23.0, 12.0, 8.0]);
                 // corner cutter
                 translate([15.0, -6.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=0.0, cy=1.0, fn=64);
             }
-        }
         // leftmost screw hole
         union()
         {
@@ -80,7 +76,7 @@ module mountPart()
         {
             difference()
             {
-                translate([18.0, 1.0, 0.0]) cube([38.7, 12.0, 8.0]);
+                translate([18.0, 1.0, 0.0]) cube([43.7, 12.0, 8.0]);
                 // hotend screw hole left
                 translate([21.1, 7.0, -1.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
             }
@@ -94,9 +90,7 @@ module mountPart()
     // center column curves left
     translate([18.0, 13.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=1.0, cy=1.0, fn=64);
     translate([18.0, -2.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=1.0, cy=0.0, fn=64);
-    // center column curves right
-    translate([52.7, 13.0, 0.0]) curved_corner_2D(a=4.0, h=20.0, cx=0.0, cy=1.0, fn=64);
-    translate([52.7, -3.0, 0.0]) curved_corner_2D(a=4.0, h=20.0, cx=0.0, cy=0.0, fn=64);
+    
 
     // upper part 
     // left mount plate
@@ -104,14 +98,14 @@ module mountPart()
     {
         difference()
         {
-            translate([-23.0, -6.0, 0.0]) cube([3.0, 20.0, 12.0]);
+            translate([-15.0, -6.0, 0.0]) cube([5.0, 30.0, 12.0]);
             // upper screw hole
             translate([0.0, 10.0, 14.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
         }
         // lower screw hole
         translate([0.0, -6.0, 14.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
     }
-    translate([-20.0, 6.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=1.0, cy=1.0, fn=64);
+    translate([-10.0, 6.0, 0.0]) curved_corner_2D(a=3.0, h=8.0, cx=1.0, cy=1.0, fn=64);
     //translate([11.05, -4.0, 0.0]) curved_corner_2D(a=3.5, h=20.0, cx=1.0, cy=1.0, fn=64);
 
     // right mount plate
@@ -124,6 +118,9 @@ module mountPart()
         }
         translate([50.0, 7.0, 14.0]) rotate([0.0, 90.0, 0.0]) cylinder(20.0, 1.5, 1.5, $fn=32);
     }
+    // center column curves right
+    translate([61.7, 13.0, 0.0]) curved_corner_2D(a=4.0, h=20.0, cx=0.0, cy=1.0, fn=64);
+    translate([61.7, -3.0, 0.0]) curved_corner_2D(a=4.0, h=20.0, cx=0.0, cy=0.0, fn=64);
 }
 
 
@@ -471,9 +468,9 @@ mountPart();
 
 
 // Hotend Placeholders /////////////////////////////////////////////////////////////////////////////////////////////////////
-translate([18.0, -16.0, 8.0]) cube([20.0, 28.0, 12.3]); // hotend heatsink
-translate([18.0, -33.8, 8.0]) cube([20.0, 10.0, 20.0]); // hotend 
-translate([8.35, -23.0, 36.0]) cube([40.0, 40.0, 10.0]); // hotend fan
+//translate([18.0, -16.0, 8.0]) cube([20.0, 28.0, 12.3]); // hotend heatsink
+//translate([18.0, -33.8, 8.0]) cube([20.0, 10.0, 20.0]); // hotend 
+//translate([8.35, -23.0, 36.0]) cube([40.0, 40.0, 10.0]); // hotend fan
 
-translate([56.0, -21.35, 7.5]) cube([12.0, 40.0, 40.0]); // side fan
+//translate([56.0, -21.35, 7.5]) cube([12.0, 40.0, 40.0]); // side fan
 
