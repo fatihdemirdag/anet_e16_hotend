@@ -140,7 +140,7 @@ module fanCoverPart()
         difference()
         {
             translate([-26.0, -20.0, 55.0]) cube([93.7, 70.0, 4.0]);
-            translate([20.85, 38.0, 59.0]) linear_extrude(2, center=true, convexity=0, 1.0, slices=1, scale=1.0) text("ANET E-16", 12, "Impact", halign="center", valign="center");
+            translate([20.85, 38.0, 59.0]) linear_extrude(10, center=true, convexity=0, 1.0, slices=1, scale=1.0) text("ANET E-16", 11, "Impact", halign="center", valign="center");
         }
         translate([20.85, 8.0, 54.5]) cylinder(5.0, 16.0, 20.0, $fn=256);
     }
@@ -149,7 +149,7 @@ module fanCoverPart()
         // center holders
         union()
         {
-            translate([0.85, 8.0, 55.0]) cube([40.0, 2.0, 2.0]); 
+            translate([0.85, 8.0, 57.0]) cube([40.0, 2.0, 2.0]); 
             translate([19.85, -12.0, 57.0]) cube([2.0, 40.0, 2.0]);
         }
         // center sphere
@@ -203,7 +203,7 @@ module fanCoverPart()
                             {
                                 for(x = [0:7])
                                 {
-                                    translate([-22.5, -4.0 + x * 4.0 + (y % 2) * 2.0, 24.0 + y * 2.0]) rotate([0.0, -90.0, 0.0]) cylinder(30.0, 1.0, 1.0, $fn=16);
+                                    translate([-22.5, -4.0 + x * 4.0 + (y % 2) * 2.0, 24.0 + y * 2.0]) rotate([0.0, -90.0, 0.0]) cylinder(30.0, 1.2, 1.2, $fn=32);
                                 }
                             }
                         }
@@ -220,7 +220,7 @@ module fanCoverPart()
         translate([-31.0, 3.0, 6.0]) rotate([0.0, 90.0, 0.0]) cylinder(4.0, 3.0, 3.0, $fn=32);
     }
     
-    translate([-13.0, -20.0, 8.2]) cube([5.0, 60.0, 46.8]);
+    translate([-13.0, -20.0, 8.2]) cube([3.0, 60.0, 46.8]);
     
     // fan cover right side
     difference()
