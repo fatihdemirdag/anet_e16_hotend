@@ -133,6 +133,7 @@ module mountPart()
 
 module fanCoverPart()
 {
+    
     // fan cover front
     difference()
     {
@@ -219,7 +220,7 @@ module fanCoverPart()
         translate([-31.0, 3.0, 6.0]) rotate([0.0, 90.0, 0.0]) cylinder(4.0, 3.0, 3.0, $fn=32);
     }
     
-    translate([-14.5, -20.0, 8.2]) cube([5.0, 60.0, 46.8]);
+    translate([-13.0, -20.0, 8.2]) cube([5.0, 60.0, 46.8]);
     
     // fan cover right side
     difference()
@@ -274,7 +275,7 @@ module fanCoverPart()
     translate([-25.0, -20.0, 35.0]) cube([91.7, 4.0, 20.0]);
     difference()
     {
-        translate([-25.0, -20.0, 12.2]) cube([10.5, 30.0, 2.0]);
+        translate([-25.0, -20.0, 12.2]) cube([12.0, 30.0, 2.0]);
         translate([-17.5, 0.0, 8.0]) rotate([0.0, 0.0, 0.0]) cylinder(10.0, 1.6, 1.6, $fn=32);
     }
     
