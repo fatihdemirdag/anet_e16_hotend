@@ -153,7 +153,7 @@ module fanCoverPart()
             translate([19.85, -12.0, 57.0]) cube([2.0, 40.0, 2.0]);
         }
         // center sphere
-        translate([20.85, 8.0, 55.0]) cylinder(4.0, 14.0, 16.0, $fn=256);
+        translate([20.85, 8.0, 55.0]) cylinder(4.0, 12.0, 14.0, $fn=256);
     }
         
     // front fan screw holes
@@ -323,7 +323,11 @@ module fanCoverPart()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//mountPart();
+
+translate([-11.15, 30.0, 52.0]) cube([64.0, 16.0, 2.0]);
+translate([20.85, 38.0, 57.0]) linear_extrude(6, center=true, convexity=0, 1.0, slices=1, scale=1.0) text("ANET E-16", 11, "Impact", halign="center", valign="center");
+
+mountPart();
 fanCoverPart();
 
 
